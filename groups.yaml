@@ -6,14 +6,14 @@ default_view:
     - group.smoke_alarms
     - group.all_lights
     - climate.shikobee
+    - device_trackers
 
 media_view:
   name: Media
   icon: mdi:headphones
   view: yes
   entities:
-    - media_player.roku
-    - media_player.pandora
+    - media_player.roku_4a755u081030
     - group.internet_status
 
 garage:
@@ -39,3 +39,8 @@ internet_status:
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
+
+device_trackers:
+  name: Device Tracking
+  - device_tracker.thor_oneplus3
+  - device_tracker.eiko_samsung
