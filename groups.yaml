@@ -6,7 +6,7 @@ default_view:
     - group.smoke_alarms
     - group.all_lights
     - climate.shikobee
-    - device_trackers
+    - group.device_trackers
 
 media_view:
   name: Media
@@ -42,5 +42,6 @@ internet_status:
 
 device_trackers:
   name: Device Tracking
-  - device_tracker.thor_oneplus3
-  - device_tracker.eiko_samsung
+  entities:
+    - device_tracker.thor_oneplus3
+    - device_tracker.eiko_samsung
