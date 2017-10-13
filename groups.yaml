@@ -14,7 +14,7 @@ media_view:
   entities:
     - media_player.roku
     - media_player.pandora
-
+    - group.internet_status
 
 garage:
   name: Garage
@@ -32,3 +32,10 @@ sensor_battery_levels:
   name: Sensor Battery Levels
   entities:
     - sensor.battery_level_smoke_co_alarm
+
+internet_status:
+  name: Internet Status
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
