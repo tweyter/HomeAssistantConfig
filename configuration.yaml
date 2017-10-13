@@ -54,14 +54,6 @@ sun:
 
 sensor:
   - platform: yr
-  - platform: ring
-    monitored_conditions:
-      - battery
-      - last_activity
-      - last_ding
-      - last_motion
-      - volume
-
   - platform: template
     sensors:
       door_to_garage:
@@ -96,6 +88,13 @@ sensor:
       - ping
       - download
       - upload
+#  - platform: ring
+#    monitored_conditions:
+#      - battery
+#      - last_activity
+#      - last_ding
+#      - last_motion
+#      - volume
 
 # Text to speech
 tts:
@@ -132,6 +131,11 @@ notify:
 
 device_tracker:
   - platform: owntracks_http
+    max_gps_accuracy: 200
+  - platform: tplink
+    host: 192.168.0.1
+    username: !secret tplink_username
+    password: !secret tplink_password
 
 zone:
   - name: Home

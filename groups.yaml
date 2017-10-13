@@ -1,3 +1,21 @@
+#pages
+default_view:
+  view: yes
+  entities:
+    - group.garage
+    - group.smoke_alarms
+    - group.all_lights
+    - climate.shikobee
+
+media_view:
+  name: Media
+  icon: mdi:headphones
+  view: yes
+  entities:
+    - media_player.roku
+    - media_player.pandora
+
+
 garage:
   name: Garage
   entities:
@@ -14,4 +32,3 @@ sensor_battery_levels:
   name: Sensor Battery Levels
   entities:
     - sensor.battery_level_smoke_co_alarm
-
