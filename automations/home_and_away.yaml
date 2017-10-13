@@ -1,0 +1,12 @@
+alias: "Thor arrives home"
+condition:
+  condition: zone
+  entity_id: device_tracker.thor_oneplus3
+  zone: zone.home
+action:
+  services:
+    - service: notify.thor_phone
+      data:
+        message: "You have arrived at home."
+
+
