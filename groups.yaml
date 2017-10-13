@@ -1,0 +1,17 @@
+garage:
+  name: Garage
+  entities:
+    - sensor.door_to_garage
+    - sensor.garage_door
+
+smoke_alarms:
+  name: Smoke Alarms
+  entities:
+    - sensor.status_smoke_co_alarm
+    - sensor.battery_level_smoke_co_alarm
+
+sensor_battery_levels:
+  name: Sensor Battery Levels
+  entities:
+    - sensor.battery_level_smoke_co_alarm
+

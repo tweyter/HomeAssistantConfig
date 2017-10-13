@@ -1,0 +1,11 @@
+sensor.door_to_garage:
+  icon: mdi:square-outline
+
+sensor.garage_door:
+  icon: mdi:garage
+
+sensor.status_smoke_co_alarm:
+  icon: mdi:alarm-light
+
+sensor.battery_level_smoke_co_alarm:
+  icon: mdi:battery
