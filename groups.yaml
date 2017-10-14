@@ -2,6 +2,8 @@
 default_view:
   view: yes
   entities:
+    - sensor.dark_sky_icon
+    - sun.sun
     - group.garage
     - group.smoke_alarms
     - group.all_lights
