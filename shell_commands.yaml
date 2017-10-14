@@ -1,0 +1,3 @@
+pi: 'sudo reboot -now'
+git_pull: 'bash ~/.home_assistant/git_pull.sh'
+restart_homeassistant: 'sudo systemctl restart home-assistant@homeassistant'

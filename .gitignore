@@ -1,5 +1,6 @@
 *
 !*.yaml
+!*.sh
 !scenes
 !.gitignore
 !.travis.yml

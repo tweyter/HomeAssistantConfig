@@ -1,0 +1,4 @@
+get_latest_config:
+  alias: 'Update config'
+  sequence:
+    - service: shell_command.git_pull
