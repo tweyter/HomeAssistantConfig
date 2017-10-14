@@ -18,6 +18,17 @@ media_view:
     - media_player.roku_4a755u081030
     - group.internet_status
 
+garage_view:
+  name: Garage Door Data
+  icon: mdi:garage
+  view: yes
+  entities:
+    - binary_sensor.vision_zg8101_garage_door_detector_sensor
+    - sensor.vision_zg8101_garage_door_detector_alarm_level
+    - sensor.vision_zg8101_garage_door_detector_alarm_type
+    - sensor.vision_zg8101_garage_door_detector_burglar
+    - sensor.vision_zg8101_garage_door_detector_sourcenodeid
+
 garage:
   name: Garage
   entities:

@@ -69,7 +69,7 @@ sensor:
 
       garage_door:
         friendly_name: Garage Door
-        value_template: '{% if is_state("binary_sensor.vision_zg8101_garage_door_detector_alarm_level", "255") %}Open{% else %}Closed{% endif %}'
+        value_template: '{% if is_state("sensor.vision_zg8101_garage_door_detector_alarm_level", "255") %}Open{% else %}Closed{% endif %}'
 
       status_smoke_co_alarm:
         value_template: >-
