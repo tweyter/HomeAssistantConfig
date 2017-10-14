@@ -1,0 +1,20 @@
+# Sets thermostat to away mode if all mobile devices are away
+- alias: 'Away Mode'
+  trigger:
+    - platform: state
+      entity_id: group.device_trackers
+      from: "home"
+      to: "not_home"
+  condition:
+    - condition: state
+      entity_id: group.device_trackers
+      state: "not_home"
+    - condition: state
+      entity_id: input_boolean.location_override
+      state: "off"
+  action:
+    - service: climate.set_away_mode
+      entity_id:
+       - climate.shikobee
+      data:
+        away_mode: true
