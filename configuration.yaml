@@ -100,6 +100,13 @@ sensor:
     resource: https://api.travis-ci.org/repos/tweyter/HomeAssistantConfig/cc.json?branch=master
     scan_interval: 60
     value_template: "{{ value_json.last_build_number }}"
+  - platform: darksky
+    api_key: !secret dark_sky_key
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance
+
 #  - platform: ring
 #    monitored_conditions:
 #      - battery
