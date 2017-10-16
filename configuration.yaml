@@ -163,6 +163,11 @@ zone:
     radius: 200
     icon: mdi:account-multiple
 
+input_boolean:
+  doortogarage_timer:
+    name: Timer that is started when the door to the garage is opened.
+    initial: off
+
 group: !include groups.yaml
 automation: !include_dir_list automations
 script: !include scripts.yaml
