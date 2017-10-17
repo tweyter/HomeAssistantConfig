@@ -30,6 +30,19 @@
   action:
     - service: script.get_latest_config
 
+- alias: 'Start door_to_garage_timer'
+  trigger:
+    - platform: state
+      entity_id: sensor.door_to_garage
+      from: "Closed"
+      to: "Open"
+  condition:
+    - condition: state
+      entity_id: sensor.door_to_garage
+      state: "Open"
+  action:
+    - service: script.door_to_garage_timer
+
 - alias: 'Leaving home'
   trigger:
     - platform: state
