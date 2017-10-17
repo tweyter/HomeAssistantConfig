@@ -69,3 +69,20 @@
         title: "Leaving"
         sound: pianobar
         priority: 0
+
+- alias: 'Door to garage test'
+  trigger:
+    - platform: state
+      entity_id: sensor.door_to_garage
+      from: "Closed"
+      to: "Open"
+  condition:
+    - condition: state
+      entity_id: sensor.door_to_garage
+      state: "Open"
+  action:
+    - service: notify.thor_phone
+      data:
+        message: "Door to garage is open"
+        title: "Door to garage"
+        sound: falling
