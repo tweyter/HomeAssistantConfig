@@ -70,9 +70,11 @@ device_trackers:
 system_monitor:
   name: System Monitor
   entities:
-    - sensor.systemmonitor
+    - sensor.disk_use_home
+    - sensor.ram_use
+    - sensor.last_boot
 
 ssl_certificate:
   name: SSL Certificate Expiry
   entities:
-    - sensor.cert_expiry
+    - sensor.duckdns_ssl_certificate_expiry
