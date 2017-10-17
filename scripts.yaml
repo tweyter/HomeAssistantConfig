@@ -6,11 +6,11 @@ get_latest_config:
 door_to_garage_timer:
   alias: "When door to garage is opened start timer"
   sequence:
-    - condition: state
-      entity_id: input_boolean.doortogarage_timer
-      state: 'on'
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.doortogarage_timer
     - delay:
         minutes: 10
-    - condition: state
-      entity_id: input_boolean.doortogarage_timer
-      state: 'off'
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.doortogarage_timer
