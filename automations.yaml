@@ -28,6 +28,12 @@
       entity_id: sensor.travis_status
       state: 'Success'
   action:
+    - service: notify.thor_phone
+      data:
+        message: "Updating git to latest config."
+        title: "Git Update"
+        sound: pianobar
+        priority: 0
     - service: script.get_latest_config
 
 - alias: 'Start door_to_garage_timer'
