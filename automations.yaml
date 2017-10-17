@@ -31,9 +31,6 @@
     - service: notify.thor_phone
       data:
         message: "Updating git to latest config."
-        title: "Git Update"
-        sound: pianobar
-        priority: 0
     - service: script.get_latest_config
 
 - alias: 'Start door_to_garage_timer'
@@ -47,7 +44,7 @@
       entity_id: sensor.door_to_garage
       state: "Open"
   action:
-    - service: script.door_to_garage_timer
+    service: script.door_to_garage_timer
 
 - alias: 'Leaving home'
   trigger:
@@ -63,12 +60,9 @@
       entity_id: input_boolean.doortogarage_timer
       state: "on"
   action:
-    - service: notify.thor_phone
-      data:
-        message: "Leaving the house"
-        title: "Leaving"
-        sound: pianobar
-        priority: 0
+    service: notify.thor_phone
+    data:
+      message: "Leaving the house"
 
 - alias: 'Door to garage test'
   trigger:
@@ -81,8 +75,6 @@
       entity_id: sensor.door_to_garage
       state: "Open"
   action:
-    - service: notify.thor_phone
-      data:
-        message: "Door to garage is open"
-        title: "Door to garage"
-        sound: falling
+    service: notify.thor_phone
+    data:
+      message: "Door to garage is open"
