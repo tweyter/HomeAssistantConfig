@@ -111,8 +111,8 @@ sensor:
     name: DuckDNS SSL Certificate Expiry
   - platform: systemmonitor
     resources:
-#      - type: disk_use_percent
-#        arg: /home
+      - type: disk_use_percent
+        arg: /home
       - type: memory_use_percent
       - type: last_boot
 
