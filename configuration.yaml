@@ -115,6 +115,7 @@ sensor:
         arg: /home
       - type: memory_use_percent
       - type: last_boot
+  - platform: cpuspeed
 
 #  - platform: ring
 #    monitored_conditions:
