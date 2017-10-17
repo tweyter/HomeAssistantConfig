@@ -179,5 +179,5 @@ input_boolean:
     initial: off
 
 group: !include groups.yaml
-automation: !include_dir_list automations
+automation: !include automations.yaml
 script: !include scripts.yaml
