@@ -16,7 +16,15 @@ media_view:
   view: yes
   entities:
     - media_player.roku_4a755u081030
+
+system_view:
+  name: System
+  icon: mdi:desktop-classic
+  view: yes
+  entities:
     - group.internet_status
+    - sensor.cert_expiry
+    - sensor.system_monitor
 
 garage_view:
   name: Garage Door Data
