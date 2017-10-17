@@ -23,8 +23,8 @@ system_view:
   view: yes
   entities:
     - group.internet_status
-    - sensor.cert_expiry
-    - sensor.system_monitor
+    - group.ssl_certificate
+    - group.system_monitor
 
 garage_view:
   name: Garage Door Data
@@ -66,3 +66,15 @@ device_trackers:
   entities:
     - device_tracker.thor_oneplus3
     - device_tracker.eiko_samsung
+
+system_monitor:
+  name: System Monitor
+  entities:
+    - sensor.systemmonitor.disk_use_percent
+    - sensor.systemmonitor.memory_use_percent
+    - sensor.systemmonitor.last_boot
+
+ssl_certificate:
+  name: SSL Certificate Expiry
+  entities:
+    - sensor.cert_expiry

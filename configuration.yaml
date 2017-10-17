@@ -109,7 +109,7 @@ sensor:
   - platform: cert_expiry
     host: tweyter.duckdns.org
     name: DuckDNS SSL Certificate Expiry
-  - platform: system_monitor
+  - platform: systemmonitor
     resources:
       - type: disk_use_percent
         arg: /home
