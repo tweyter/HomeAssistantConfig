@@ -177,6 +177,8 @@ input_boolean:
   doortogarage_timer:
     name: Timer that is started when the door to the garage is opened.
     initial: off
+  location_override:
+    initial: off
 
 group: !include groups.yaml
 automation: !include automations.yaml
