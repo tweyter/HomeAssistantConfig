@@ -95,11 +95,8 @@ sensor:
       - ping
       - download
       - upload
-  - platform: rest
-    name: Travis Status Label
-    resource: https://api.travis-ci.org/repos/tweyter/HomeAssistantConfig/cc.json?branch=master
-    scan_interval: 60
-    value_template: "{{ value_json.last_build_number }}"
+  - platform: travisci
+    github_token: !secret github_api_key_for_travis
   - platform: darksky
     api_key: !secret dark_sky_key
     monitored_conditions:
