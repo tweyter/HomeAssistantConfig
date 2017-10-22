@@ -97,6 +97,7 @@ sensor:
       - upload
   - platform: travisci
     api_key: !secret github_api_key_for_travis
+    repository: https://github.com/tweyter/HomeAssistantConfig
   - platform: darksky
     api_key: !secret dark_sky_key
     monitored_conditions:
