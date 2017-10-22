@@ -25,8 +25,8 @@
 #      entity_id: sensor.travisci
 #  condition:
 #    - condition: state
-#      entity_id: sensor.travis_status
-#      state: 'Success'
+#      entity_id: sensor.tweyterhomeassistantconfig_last_build_state
+#      state: 'passed'
 #  action:
 #    - service: notify.thor_phone
 #      data:

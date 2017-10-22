@@ -23,8 +23,8 @@ system_view:
   view: yes
   entities:
     - group.internet_status
-    - group.ssl_certificate
     - group.system_monitor
+    - group.travis_ci
 
 garage_view:
   name: Garage Door Data
@@ -74,7 +74,12 @@ system_monitor:
     - sensor.ram_use
     - sensor.last_boot
 
-ssl_certificate:
-  name: SSL Certificate Expiry
+travis_ci:
+  name: Build Status
   entities:
-    - sensor.duckdns_ssl_certificate_expiry
+    - sensor.tweyterhomeassistantconfig_state
+    - sensor.tweyterhomeassistantconfig_last_build_state
+    - sensor.tweyterhomeassistantconfig_last_build_id
+    - sensor.tweyterhomeassistantconfig_last_build_started_at
+    - sensor.tweyterhomeassistantconfig_last_build_finished_at
+    - sensor.tweyterhomeassistantconfig_last_build_duration
