@@ -96,7 +96,7 @@ sensor:
       - download
       - upload
   - platform: travisci
-    github_token: !secret github_api_key_for_travis
+    api_key: !secret github_api_key_for_travis
   - platform: darksky
     api_key: !secret dark_sky_key
     monitored_conditions:
