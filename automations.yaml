@@ -19,8 +19,8 @@
       data:
         away_mode: true
 
-# Turn off thermostat away mode if Eiko's mobile devices is home
-- alias: 'Home Mode'
+# Sets thermostat to away mode if all mobile devices are away
+- alias: 'End Away Mode'
   trigger:
     - platform: state
       entity_id: device_tracker.eiko_samsung
@@ -28,7 +28,7 @@
       to: "home"
   condition:
     - condition: state
-      entity_id: device_tracker.eiko_samsung
+      entity_id: group.device_trackers
       state: "home"
     - condition: state
       entity_id: input_boolean.location_override
@@ -85,7 +85,7 @@
     data:
       message: "Leaving the house"
 
-- alias: 'Door to garage is open'
+- alias: 'Door to garage test'
   trigger:
     - platform: state
       entity_id: sensor.door_to_garage
@@ -96,30 +96,6 @@
       entity_id: sensor.door_to_garage
       state: "Open"
   action:
-    - service: notify.thor_phone
-      data:
-        message: "Door to garage is open"
-
-- alias: 'Door to garage turns off Ecobee away mode'
-  trigger:
-    - platform: state
-      entity_id: sensor.door_to_garage
-      from: "Closed"
-      to: "Open"
-  condition:
-    - condition: state
-      entity_id: sensor.door_to_garage
-      state: "Open"
-    - condition: state
-      entity_id: ecobee_away_mode
-      state:
-        true
-  action:
-    - service: notify.thor_phone
-      data:
-        message: "Turning off away mode"
-    - service: climate.set_away_mode
-      entity_id:
-       - climate.shikobee
-      data:
-        away_mode: false
+    service: notify.thor_phone
+    data:
+      message: "Door to garage is open"
