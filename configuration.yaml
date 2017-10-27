@@ -52,13 +52,6 @@ logbook:
 # Track the sun
 sun:
 
-binary_sensor:
-  - platform: template
-    sensors:
-      - ecobee_away_mode:
-          value_template: {{climate.shikobee.attributes.away_mode}}
-          friendly_name: Ecobee Away Mode
-
 sensor:
   - platform: yr
   - platform: template
