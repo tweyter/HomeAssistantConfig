@@ -111,7 +111,7 @@
       entity_id: sensor.door_to_garage
       state: "Open"
     - condition: state
-      entity_id: climate.shikobee.attributes.away_mode
+      entity_id: ecobee_away_mode
       state:
         true
   action:
