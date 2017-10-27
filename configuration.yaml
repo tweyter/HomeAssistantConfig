@@ -53,11 +53,13 @@ logbook:
 sun:
 
 binary_sensor:
-  - platform: ecobee_away_mode
-    value_template: climate.shikobee.attributes.away_mode
-    friendly_name: Ecobee Away Mode
-    entity_id:
-      - sensor: climate.shikobee
+  - platform: template
+    sensors:
+      ecobee_away_mode:
+      value_template: climate.shikobee.attributes.away_mode
+      friendly_name: Ecobee Away Mode
+      entity_id:
+        - sensor: climate.shikobee
 
 sensor:
   - platform: yr
