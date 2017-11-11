@@ -48,11 +48,17 @@ smoke_alarms:
   entities:
     - sensor.status_smoke_co_alarm
     - sensor.battery_level_smoke_co_alarm
+    - sensor.status_smoke_co_alarm_2
+    - sensor.battery_level_smoke_co_alarm_2
+    - sensor.status_smoke_co_alarm_3
+    - sensor.battery_level_smoke_co_alarm_3
 
 sensor_battery_levels:
   name: Sensor Battery Levels
   entities:
     - sensor.battery_level_smoke_co_alarm
+    - sensor.battery_level_smoke_co_alarm_2
+    - sensor.battery_level_smoke_co_alarm_3
 
 internet_status:
   name: Internet Status
