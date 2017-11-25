@@ -105,17 +105,20 @@
     data:
       message: "Leaving the house"
 
-#- alias: 'Door to garage test'
-#  trigger:
-#    - platform: state
-#      entity_id: sensor.door_to_garage
-#      from: "Closed"
-#      to: "Open"
-#  condition:
-#    - condition: state
-#      entity_id: sensor.door_to_garage
-#      state: "Open"
-#  action:
-#    service: notify.thor_phone
-#    data:
-#      message: "Door to garage is open"
+
+- alias: 'Entry light on'
+  trigger:
+    - platform: sun
+      event: sunset
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.hue_white_lamp_2
+
+- alias: 'Entry light off'
+  trigger:
+    - platform: time
+      at: "23:00:00"
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.hue_white_lamp_2
+      
