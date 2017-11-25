@@ -121,4 +121,3 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.hue_white_lamp_2
-      

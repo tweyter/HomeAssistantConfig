@@ -172,10 +172,9 @@ zwave:
 #  username: !secret ring_username
 #  password: !secret ring_password
 
-# Roku Media player and Pandora music player
+# Roku Media player
 media_player:
   - platform: roku
-  - platform: pandora
 
 # Pushover push notifications
 notify:
