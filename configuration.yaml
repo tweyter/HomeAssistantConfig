@@ -56,7 +56,7 @@ sensor:
   - platform: yr
   - platform: template
     sensors:
-      sensor.aeotec_dsb45_water_sensor_flood:
+      aeotec_dsb45_water_sensor_flood:
         friendly_name: Basement water sensor
       door_to_garage:
         friendly_name: Door to Garage
