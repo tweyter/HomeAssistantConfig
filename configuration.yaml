@@ -56,6 +56,10 @@ sensor:
   - platform: yr
   - platform: template
     sensors:
+      basement_water_sensor:
+        friendly_name: Basement water sensor
+        value_template: '{% if is_state("sensor.aeotec_dsb45_water_sensor_flood", "0") %}False{% else %}True{% endif %}'
+
       door_to_garage:
         friendly_name: Door to Garage
         value_template: '{% if is_state("sensor.hank_unknown_type0201_id0008_access_control", "23") %}Closed{% else %}Open{% endif %}'
