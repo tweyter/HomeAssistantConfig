@@ -121,14 +121,3 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.hue_white_lamp_2
-
-- alias: 'Water detected in basement'
-  trigger:
-    - platform: state
-      entity_id: aeotec_dsb45_water_sensor_flood
-      from: 0
-      to: 255
-  action:
-    service: notify.thor_phone
-    data:
-      message: "Water detected in basement"
