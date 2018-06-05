@@ -113,6 +113,8 @@
   action:
     - service: homeassistant.turn_on
       entity_id: light.hue_white_lamp_2
+    - service: homeassistant.turn_on
+      entity_id: light.hue_white_lamp_1
 
 - alias: 'Entry light off'
   trigger:
@@ -121,6 +123,8 @@
   action:
     - service: homeassistant.turn_off
       entity_id: light.hue_white_lamp_2
+    - service: homeassistant.turn_off
+      entity_id: light.hue_white_lamp_1
 
 - alias: 'Water in basement'
   trigger:
