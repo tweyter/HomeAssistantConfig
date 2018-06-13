@@ -113,10 +113,17 @@
   action:
     - service: homeassistant.turn_on
       entity_id: light.hue_white_lamp_2
+
+- alias: 'Living room light on'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: "-01:00:00"
+  action:
     - service: homeassistant.turn_on
       entity_id: light.hue_white_lamp_1
 
-- alias: 'Entry light off'
+- alias: 'Entry and living room lights off'
   trigger:
     - platform: time
       at: "23:00:00"
