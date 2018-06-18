@@ -1,64 +1,64 @@
-# Sets thermostat to away mode if all mobile devices are away
-- alias: 'Away Mode'
-  trigger:
-    - platform: state
-      entity_id: group.device_trackers
-      from: "home"
-      to: "not_home"
-  condition:
-    - condition: state
-      entity_id: group.device_trackers
-      state: "not_home"
-    - condition: state
-      entity_id: input_boolean.location_override
-      state: "off"
-  action:
-    - service: climate.set_away_mode
-      entity_id:
-       - climate.shikobee
-      data:
-        away_mode: true
-
-# Sets thermostat to away mode if all mobile devices are away
-- alias: 'End Away Mode'
-  trigger:
-    - platform: state
-      entity_id: device_tracker.eiko_samsung
-      from: "not_home"
-      to: "home"
-  condition:
-    - condition: state
-      entity_id: device_tracker.eiko_samsung
-      state: "home"
-    - condition: state
-      entity_id: input_boolean.location_override
-      state: "off"
-  action:
-    - service: climate.set_away_mode
-      entity_id:
-       - climate.shikobee
-      data:
-        away_mode: false
-
-- alias: 'End Away Mode - Thor'
-  trigger:
-    - platform: state
-      entity_id: device_tracker.thor_oneplus3
-      from: "not_home"
-      to: "home"
-  condition:
-    - condition: state
-      entity_id: device_tracker.thor_oneplus3
-      state: "home"
-    - condition: state
-      entity_id: input_boolean.location_override
-      state: "off"
-  action:
-    - service: climate.set_away_mode
-      entity_id:
-       - climate.shikobee
-      data:
-        away_mode: false
+## Sets thermostat to away mode if all mobile devices are away
+#- alias: 'Away Mode'
+#  trigger:
+#    - platform: state
+#      entity_id: group.device_trackers
+#      from: "home"
+#      to: "not_home"
+#  condition:
+#    - condition: state
+#      entity_id: group.device_trackers
+#      state: "not_home"
+#    - condition: state
+#      entity_id: input_boolean.location_override
+#      state: "off"
+#  action:
+#    - service: climate.set_away_mode
+#      entity_id:
+#       - climate.shikobee
+#      data:
+#        away_mode: true
+#
+## Sets thermostat to away mode if all mobile devices are away
+#- alias: 'End Away Mode'
+#  trigger:
+#    - platform: state
+#      entity_id: device_tracker.eiko_samsung
+#      from: "not_home"
+#      to: "home"
+#  condition:
+#    - condition: state
+#      entity_id: device_tracker.eiko_samsung
+#      state: "home"
+#    - condition: state
+#      entity_id: input_boolean.location_override
+#      state: "off"
+#  action:
+#    - service: climate.set_away_mode
+#      entity_id:
+#       - climate.shikobee
+#      data:
+#        away_mode: false
+#
+#- alias: 'End Away Mode - Thor'
+#  trigger:
+#    - platform: state
+#      entity_id: device_tracker.thor_oneplus3
+#      from: "not_home"
+#      to: "home"
+#  condition:
+#    - condition: state
+#      entity_id: device_tracker.thor_oneplus3
+#      state: "home"
+#    - condition: state
+#      entity_id: input_boolean.location_override
+#      state: "off"
+#  action:
+#    - service: climate.set_away_mode
+#      entity_id:
+#       - climate.shikobee
+#      data:
+#        away_mode: false
 
 #- alias: 'Update config if travis build is successfull'
 #  trigger:
