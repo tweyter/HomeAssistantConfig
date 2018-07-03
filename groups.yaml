@@ -6,7 +6,7 @@ default_view:
     - sun.sun
     - group.garage
     - group.smoke_alarms
-    - group.all_lights
+    - group.lights
     - climate.shikobee
     - group.device_trackers
 
@@ -89,3 +89,9 @@ travis_ci:
     - sensor.tweyterhomeassistantconfig_last_build_started_at
     - sensor.tweyterhomeassistantconfig_last_build_finished_at
     - sensor.tweyterhomeassistantconfig_last_build_duration
+
+lights:
+  name: lights
+  entities:
+    - light.hue_white_lamp_1
+    - light.hue_white_lamp_2
